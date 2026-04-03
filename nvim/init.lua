@@ -28,3 +28,4 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup("plugins")
 
+pcall(require, "custom_mappings")

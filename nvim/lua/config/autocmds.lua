@@ -82,6 +82,17 @@ api.nvim_create_autocmd("WinClosed", {
   nested = true,
 })
 
+-- Enforce winfixwidth for sidebars so standard splits don't resize them
+api.nvim_create_autocmd({ "BufEnter", "WinEnter" }, {
+  group = api.nvim_create_augroup("FixSidebarWidths", { clear = true }),
+  callback = function()
+    local ft = vim.bo.filetype
+    if ft == "NvimTree" or ft == "undotree" or ft == "diff" then
+      vim.wo.winfixwidth = true
+    end
+  end,
+})
+
 -- Auto-open NvimTree and Undotree on startup
 api.nvim_create_autocmd("VimEnter", {
   group = api.nvim_create_augroup("AutoOpenSidebars", { clear = true }),
@@ -103,3 +114,5 @@ api.nvim_create_autocmd("VimEnter", {
     end)
   end,
 })
+
+

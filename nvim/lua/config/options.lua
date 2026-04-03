@@ -16,3 +16,4 @@ opt.softtabstop = 2
 opt.tabstop = 8
 opt.expandtab = true
 opt.splitright = true
+opt.equalalways = false

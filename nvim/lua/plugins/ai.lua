@@ -113,8 +113,9 @@ return {
         chat = {
           show_settings = false,
           window = {
-            layout = "vertical",
-            width = 0.45, -- Enlarged pane size
+            layout = "float",
+            width = 0.8,
+            height = 0.8,
           },
         },
       },
