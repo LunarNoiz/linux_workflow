@@ -4,21 +4,22 @@
 
 echo "Running Python checks..."
 
-# Check if ruff exists, if so run it
-if command -v ruff >/dev/null 2>&1; then
-    echo "Running ruff linter..."
-    ruff check . || exit 1
-else
-    echo "Warning: ruff not found. Skipping linting."
+# Strict Binary Enforcement
+if ! command -v ruff >/dev/null 2>&1; then
+    echo "ERROR: 'ruff' is missing! Agents MUST install it or instruct the user to install it before proceeding."
+    exit 1
 fi
 
-# Check if pytest exists, if so run it
-if command -v pytest >/dev/null 2>&1; then
-    echo "Running pytest..."
-    pytest || exit 1
-else
-    echo "Warning: pytest not found. Skipping tests."
+if ! command -v pytest >/dev/null 2>&1; then
+    echo "ERROR: 'pytest' is missing! Agents MUST install it or instruct the user to install it before proceeding."
+    exit 1
 fi
+
+echo "Running ruff linter..."
+ruff check . || exit 1
+
+echo "Running pytest..."
+pytest || exit 1
 
 echo "All checks passed successfully."
 exit 0

@@ -8,17 +8,17 @@ fi
 
 TASK="$1"
 
-# The prompt forces the use of the error-checker agent and adherence to Pillar 2.
+# The prompt forces the strict Feedback Loop.
 PROMPT="TASK: $TASK
 
-CRITICAL WORKFLOW INSTRUCTIONS:
-1. You must read OPENCODE.md to understand the rules before starting.
-2. Complete the requested task.
-3. You are part of a Supervisor loop. Before you conclude this session, you MUST use the Task tool to launch the 'error-checker' subagent.
-4. Instruct the 'error-checker' agent to run './run-checks.sh' using the bash tool.
-5. If the 'error-checker' reports ANY errors from the bash tool, you MUST fix the errors in your code, and then invoke the 'error-checker' again.
-6. Once the tests pass, evaluate if the error was due to a missing rule. If so, append a 1-sentence constraint to OPENCODE.md so you don't make the mistake again.
-7. Conclude only when the error-checker confirms success."
+CRITICAL SUPERVISOR WORKFLOW (STRICT ENFORCEMENT):
+1. READ FIRST: You MUST read OPENCODE.md and execute './run-checks.sh' to establish a baseline before writing ANY code. If baseline checks fail, fix the environment/dependencies immediately.
+2. TDD ENFORCEMENT: If fixing a bug or adding a feature, you MUST write a test that fails first, then write the code to make it pass.
+3. EXECUTE: Complete the requested task.
+4. GATEKEEPER: Before concluding, you MUST launch the 'error-checker' subagent via the Task tool. Instruct it to run './run-checks.sh'.
+5. FIX LOOP: If the gatekeeper fails, you MUST fix the code, write a new test to cover the edge case, and invoke the gatekeeper again.
+6. KNOWLEDGE CAPTURE: If an error occurred that wasn't covered in OPENCODE.md, you MUST append a new constraint to OPENCODE.md.
+7. NEVER exit successfully if './run-checks.sh' fails or is bypassed."
 
 echo "Starting Opencode in Supervisor Loop..."
 opencode run "$PROMPT"
