@@ -44,9 +44,11 @@ ln -sfn "$SCRIPT_DIR/nvim" ~/.config/nvim
 [ -f "$SCRIPT_DIR/.tmux.conf" ] && ln -sfn "$SCRIPT_DIR/.tmux.conf" ~/.tmux.conf
 [ -d "$SCRIPT_DIR/.tmux" ] && ln -sfn "$SCRIPT_DIR/.tmux" ~/.tmux
 
-# Ensure .config/opencode exists before symlinking agents
+# Ensure .config/opencode exists before symlinking
 mkdir -p ~/.config/opencode
 [ -d "$SCRIPT_DIR/opencode/agent" ] && ln -sfn "$SCRIPT_DIR/opencode/agent" ~/.config/opencode/agent
+[ -d "$SCRIPT_DIR/opencode/plugin" ] && ln -sfn "$SCRIPT_DIR/opencode/plugin" ~/.config/opencode/plugin
+[ -d "$SCRIPT_DIR/opencode/skill" ] && ln -sfn "$SCRIPT_DIR/opencode/skill" ~/.config/opencode/skill
 
 # 5. Install Tmux Plugin Manager (TPM) if missing
 if [ ! -d ~/.tmux/plugins/tpm ]; then
