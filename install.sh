@@ -48,7 +48,7 @@ ln -sfn "$SCRIPT_DIR/nvim" ~/.config/nvim
 mkdir -p ~/.config/opencode
 [ -d "$SCRIPT_DIR/opencode/agent" ] && ln -sfn "$SCRIPT_DIR/opencode/agent" ~/.config/opencode/agent
 [ -d "$SCRIPT_DIR/opencode/plugin" ] && ln -sfn "$SCRIPT_DIR/opencode/plugin" ~/.config/opencode/plugin
-[ -d "$SCRIPT_DIR/opencode/skill" ] && ln -sfn "$SCRIPT_DIR/opencode/skill" ~/.config/opencode/skill
+[ -d "$SCRIPT_DIR/opencode/skills" ] && ln -sfn "$SCRIPT_DIR/opencode/skills" ~/.config/opencode/skills
 
 # 5. Install Tmux Plugin Manager (TPM) if missing
 if [ ! -d ~/.tmux/plugins/tpm ]; then
