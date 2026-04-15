@@ -5,6 +5,16 @@
     "@josxa/opencode-pty@latest"
   ],
   "mcp": {
+    "hexstrike-ai": {
+      "type": "local",
+      "command": [
+        "/home/jin/hexstrike-ai/hexstrike-env/bin/python3",
+        "/home/jin/hexstrike-ai/hexstrike_mcp.py",
+        "--server",
+        "http://localhost:8888",
+      ],
+      "enabled": true,
+    },
     "context7": {
       "type": "remote",
       "url": "https://mcp.context7.com/mcp",
