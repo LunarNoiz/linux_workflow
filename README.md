@@ -97,9 +97,10 @@ Initialize a `.opencode/` directory for project-specific configuration:
 This creates:
 ```
 .yourproject/
+├── .claude/
+│   ├── OPENCODE.md      # Project rules and conventions
+│   └── run-checks.sh    # Test/lint runner
 ├── .opencode/
-│   ├── opencode.json    # Project config
-│   ├── AGENTS.md        # Project guidelines
 │   ├── agents/          # Custom agents
 │   ├── commands/        # Custom commands
 │   └── prompts/         # Custom prompts
