@@ -49,6 +49,7 @@ mkdir -p ~/.config/opencode
 [ -d "$SCRIPT_DIR/opencode/agent" ] && ln -sfn "$SCRIPT_DIR/opencode/agent" ~/.config/opencode/agent
 [ -d "$SCRIPT_DIR/opencode/plugin" ] && ln -sfn "$SCRIPT_DIR/opencode/plugin" ~/.config/opencode/plugin
 [ -d "$SCRIPT_DIR/opencode/skills" ] && ln -sfn "$SCRIPT_DIR/opencode/skills" ~/.config/opencode/skills
+[ -f "$SCRIPT_DIR/opencode/AGENTS.md" ] && ln -sfn "$SCRIPT_DIR/opencode/AGENTS.md" ~/.config/opencode/AGENTS.md
 [ -f "$SCRIPT_DIR/opencode/opencode.json" ] && ln -sfn "$SCRIPT_DIR/opencode/opencode.json" ~/.config/opencode/opencode.json
 [ -f "$SCRIPT_DIR/opencode/package.json" ] && ln -sfn "$SCRIPT_DIR/opencode/package.json" ~/.config/opencode/package.json
 
