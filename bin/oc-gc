@@ -18,7 +18,7 @@ if [ "$1" = "--help" ] || [ "$1" = "-h" ]; then
     exit 0
 fi
 
-PROMPT="CRITICAL WORKFLOW INSTRUCTIONS (Pillar 3: Garbage Collection):
+PROMPT="Please use the Task tool to launch the 'code-gc' subagent to perform the following Garbage Collection pass:
 1. Read .claude/OPENCODE.md to understand the current rules.
 2. Scan the current project directory for any files that violate the rules in .claude/OPENCODE.md.
 3. Specifically look for and remove unused code, commented-out dead code, or obsolete configuration.
@@ -26,4 +26,4 @@ PROMPT="CRITICAL WORKFLOW INSTRUCTIONS (Pillar 3: Garbage Collection):
 5. If changes were made and tests pass, commit the changes with a message like 'chore: AI garbage collection cleanup'. If no changes were needed, just report that the codebase is clean."
 
 echo "Triggering AI Garbage Collection..."
-opencode run --agent code-gc "$PROMPT"
+opencode run "$PROMPT"
