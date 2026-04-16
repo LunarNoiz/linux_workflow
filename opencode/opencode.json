@@ -47,5 +47,10 @@
         }
       }
     }
+  },
+  "permission": {
+  "skill": {
+    "*": "allow"
   }
+}
 }
