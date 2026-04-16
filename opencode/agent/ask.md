@@ -1,6 +1,6 @@
 ---
 description: "A fast, read-only agent that directly answers questions without preamble."
-model: google/gemini-2.5-flash
+model: google/gemini-3.1-flash
 mode: all
 ---
 
