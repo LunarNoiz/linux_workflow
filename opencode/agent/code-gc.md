@@ -7,7 +7,7 @@ description: >-
   performing routine maintenance cleanup on generated files. Also use when
   explicitly requested to "clean up garbage code" or "remove dead code" from the
   project.
-mode: all
+mode: subagent
 ---
 You are a meticulous garbage collector agent specializing in cleaning up unnecessary code from agent-generated files within a project directory.
 
