@@ -25,26 +25,11 @@ api.nvim_create_autocmd("FileType", {
   end,
 })
 
--- CodeCompanion Tmux Navigation overrides
-api.nvim_create_autocmd("FileType", {
-  pattern = "codecompanion",
-  callback = function(opts)
-    local map = function(keys, func)
-      vim.keymap.set("n", keys, func, { buffer = opts.buf, silent = true })
-    end
-    map("<C-h>", "<cmd>TmuxNavigateLeft<CR>")
-    map("<C-j>", "<cmd>TmuxNavigateDown<CR>")
-    map("<C-k>", "<cmd>TmuxNavigateUp<CR>")
-    map("<C-l>", "<cmd>TmuxNavigateRight<CR>")
-    map("<C-\\>", "<cmd>TmuxNavigatePrevious<CR>")
-  end,
-})
-
 -- Auto-close NvimTree if it's the last window
 local function is_sidebar_buffer(bufnr)
   local name = vim.api.nvim_buf_get_name(bufnr)
   local ft = vim.bo[bufnr].filetype
-  return name:match(".*NvimTree_%d*$") or ft == "codecompanion" or ft == "undotree" or ft == "diff"
+  return name:match(".*NvimTree_%d*$") or ft == "undotree" or ft == "diff"
 end
 
 local function tab_win_closed(winnr)

@@ -39,9 +39,4 @@ keymap('n', '<leader>gs', vim.cmd.Git, { desc = '[G]it [S]tatus' })
 -- Undotree
 keymap('n', '<leader>u', vim.cmd.UndotreeToggle, { desc = 'Toggle [U]ndotree' })
 
--- Telescope
-keymap('n', '<leader>ff', function() require('telescope.builtin').find_files() end, { desc = '[F]ind [F]iles' })
-keymap('n', '<leader>fg', function() require('telescope.builtin').live_grep() end, { desc = '[F]ind by [G]rep' })
-keymap('n', '<leader>fb', function() require('telescope.builtin').buffers() end, { desc = '[F]ind [B]uffers' })
-keymap('n', '<leader>fh', function() require('telescope.builtin').help_tags() end, { desc = '[F]ind [H]elp' })
-keymap('n', '<leader>sk', function() require('telescope.builtin').keymaps() end, { desc = '[S]earch [K]eymaps' })
+
