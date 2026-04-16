@@ -30,7 +30,7 @@
       "npm": "@ai-sdk/openai-compatible",
       "options": {
         "apiKey": "dc5843b283558f23759ea42da3fb14ec",
-        "baseURL": "http://localhost:5000/v1"
+        "baseURL": "http://100.72.71.91:5000/v1"
       },
       "models": {
         "local-model-id": {
