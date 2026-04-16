@@ -90,10 +90,10 @@ return {
         require("opencode").command("session.half.page.down")
       end, { desc = "Scroll opencode down" })
 
-      require("opencode.context")
-      require("opencode.project_init")
+      require("oc_harness.context")
+      require("oc_harness.project_init")
 
-      local ctx = require("opencode.context")
+      local ctx = require("oc_harness.context")
 
       vim.keymap.set("n", "<leader>op", function()
         local project_ctx = ctx.get_project_context()
@@ -108,7 +108,7 @@ return {
         local templates = {"generic", "python", "web", "c_cpp", "go"}
         vim.ui.select(templates, { prompt = "Select Harness Template:" }, function(choice)
           if choice then
-            require("opencode.project_init").init_project(choice)
+            require("oc_harness.project_init").init_project(choice)
           end
         end)
       end, { desc = "Initialize opencode project" })

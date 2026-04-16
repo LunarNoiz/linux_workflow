@@ -86,6 +86,13 @@ fi
 
 echo "Initializing AI harness using template '$TEMPLATE'..."
 
+# Check if directories already exist to prevent overwrite
+if [ -d ".claude" ] || [ -d ".opencode" ]; then
+    echo "Warning: .claude/ or .opencode/ already exists in this directory."
+    echo "Initialization aborted to prevent overwriting existing configurations."
+    exit 1
+fi
+
 # 1. Create the directories
 mkdir -p .claude
 mkdir -p .opencode/agents

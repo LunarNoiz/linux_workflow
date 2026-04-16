@@ -70,7 +70,7 @@ function M.create_opencode_dir()
 end
 
 function M.init_project(template)
-  local root = require('opencode.context').get_git_root()
+  local root = require('oc_harness.context').get_git_root()
   local original_cwd = vim.fn.getcwd()
   
   if template == nil or template == "" then
@@ -79,6 +79,12 @@ function M.init_project(template)
 
   vim.cmd('cd ' .. root)
   
+  if vim.fn.isdirectory(root .. '/.claude') == 1 or vim.fn.isdirectory(root .. '/.opencode') == 1 then
+    vim.notify('Harness directory already exists. Aborting to prevent data loss.', vim.log.levels.WARN)
+    vim.cmd('cd ' .. original_cwd)
+    return false
+  end
+
   local cmd = string.format("oc-init %s", template)
   local result = vim.fn.system(cmd)
   
