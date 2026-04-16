@@ -1,10 +1,7 @@
 return {
   "folke/which-key.nvim",
   event = "VeryLazy",
-  opts = {
-    -- your configuration comes here
-    -- or leave it empty to use the default settings
-  },
+  opts = {},
   config = function(_, opts)
     local wk = require("which-key")
     wk.setup(opts)
