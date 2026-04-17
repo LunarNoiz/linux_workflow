@@ -46,11 +46,25 @@
           "tool_call": true
         }
       }
+    },
+    "llamacpp": {
+      "name": "llammacpp",
+      "npm": "@ai-sdk/openai-compatible",
+      "options": {
+        "apiKey": "dummy",
+        "baseURL": "http://100.72.71.91:5000/v1"
+      },
+      "models": {
+        "local-model-id": {
+          "name": "supergemma4-26b-uncensored-fast",
+          "tool_call": true
+        }
+      }
     }
   },
   "permission": {
-  "skill": {
-    "*": "allow"
+    "skill": {
+      "*": "allow"
+    }
   }
-}
 }
