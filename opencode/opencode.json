@@ -41,7 +41,7 @@
         "baseURL": "http://100.72.71.91:5000/v1"
       },
       "models": {
-        "local-model-id": {
+        "gemma4": {
           "name": "gemma-4-26B-4.10bpw",
           "tool_call": true
         }

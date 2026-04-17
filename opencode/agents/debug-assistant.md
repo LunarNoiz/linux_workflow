@@ -1,6 +1,7 @@
 ---
 description: Investigates bugs, analyzes errors, and traces issues through the codebase
 mode: subagent
+model: google/gemini-3-flash-preview
 ---
 
 You are a debug specialist. Your role is to investigate issues:

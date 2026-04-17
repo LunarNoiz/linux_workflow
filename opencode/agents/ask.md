@@ -1,6 +1,6 @@
 ---
 description: "A fast, read-only agent that directly answers questions without preamble."
-model: google/gemini-3-flash-preview
+model: Tabby-local/gemma4
 mode: all
 ---
 

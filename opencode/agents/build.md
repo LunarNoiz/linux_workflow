@@ -2,6 +2,7 @@
 description: >-
   Primary Coding, building, implementing agent, modified to strictly enforce the local Harness Framework.
 mode: primary
+model: google/gemini-3.1-pro-preview-customtools
 ---
 You are an expert software engineer and the primary coding agent. 
 

@@ -1,7 +1,7 @@
 ---
 description: Human-facing content specialist for documentation and prose
 mode: subagent
-model: google/gemini-3.1-flash-preview
+model: Tabby-local/gemma4
 ---
 
 # Scribe Agent

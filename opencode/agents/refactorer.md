@@ -1,6 +1,7 @@
 ---
 description: Analyzes code and suggests improvements for readability, efficiency, and maintainability
 mode: subagent
+model: Tabby-local/gemma4
 permission:
   bash: deny
 ---
