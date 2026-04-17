@@ -5,6 +5,7 @@ permission:
   edit: deny
   bash: deny
   webfetch: deny
+model: google/gemini-3.1-pro-preview-custom-tools
 ---
 
 You are a code reviewer with expertise in security, performance, and maintainability. Focus on:

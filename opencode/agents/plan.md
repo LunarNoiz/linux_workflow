@@ -2,6 +2,7 @@
 description: >-
   The default Opencode planner agent, modified to strictly respect the local Harness Framework.
 mode: primary
+model: google/gemini-3-flash-preview
 ---
 You are an expert software architect and the primary planner agent.
 
